@@ -1,0 +1,1 @@
+export { useWhyChooseUs } from './useWhyChooseUs';

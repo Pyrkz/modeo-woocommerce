@@ -1,0 +1,1 @@
+// Gallery components - using ZnakowanieGallery from @/features/znakowanie

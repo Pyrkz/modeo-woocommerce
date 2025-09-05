@@ -1,0 +1,1 @@
+export { default as BusinessHero } from './BusinessHero';

@@ -1,0 +1,1 @@
+export { generateImagePlaceholder, getCategorySizes, preloadCriticalImages } from './imageOptimization';

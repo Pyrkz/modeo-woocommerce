@@ -1,0 +1,1 @@
+export { UrodzinyApi } from './urodziny.api';

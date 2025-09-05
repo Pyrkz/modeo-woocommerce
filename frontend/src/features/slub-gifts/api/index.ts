@@ -1,0 +1,1 @@
+export { SlubApi } from './slub.api';

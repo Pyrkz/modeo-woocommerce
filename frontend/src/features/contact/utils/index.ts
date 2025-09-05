@@ -1,0 +1,1 @@
+export { validateContactForm, validateEmail, validatePhone, hasFormErrors } from './validation';

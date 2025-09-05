@@ -1,0 +1,1 @@
+export { CollectionBenefitsWrapper } from './CollectionBenefitsWrapper';

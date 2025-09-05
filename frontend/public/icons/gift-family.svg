@@ -1,0 +1,53 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- House -->
+  <polygon points="32,8 48,20 48,52 16,52 16,20" fill="#FDE68A"/>
+  <polygon points="32,8 48,20 44,20 32,12 20,20 16,20" fill="#F59E0B"/>
+  
+  <!-- House details -->
+  <rect x="20" y="24" width="8" height="12" fill="#DC2626"/>
+  <rect x="36" y="24" width="8" height="12" fill="#3B82F6"/>
+  <rect x="28" y="36" width="8" height="16" fill="#92400E"/>
+  <circle cx="30" cy="44" r="1" fill="#F59E0B"/>
+  
+  <!-- Roof -->
+  <polygon points="12,22 32,6 52,22 48,20 32,8 16,20" fill="#DC2626"/>
+  
+  <!-- Chimney -->
+  <rect x="40" y="12" width="4" height="8" fill="#7C2D12"/>
+  
+  <!-- Family figures -->
+  <!-- Dad -->
+  <g transform="translate(8, 46)">
+    <circle cx="0" cy="0" r="3" fill="#FBBF9A"/>
+    <rect x="-2" y="3" width="4" height="8" fill="#3B82F6"/>
+    <rect x="-1" y="11" width="2" height="6" fill="#92400E"/>
+  </g>
+  
+  <!-- Mom -->
+  <g transform="translate(18, 48)">
+    <circle cx="0" cy="0" r="3" fill="#FBBF9A"/>
+    <path d="M-3 3C-3 3 0 7 0 7C0 7 3 3 3 3C3 8 0 8 0 8C0 8 -3 8 -3 3Z" fill="#EC4899"/>
+    <rect x="-1" y="8" width="2" height="6" fill="#F3E8FF"/>
+  </g>
+  
+  <!-- Child 1 -->
+  <g transform="translate(46, 50)">
+    <circle cx="0" cy="0" r="2" fill="#FBBF9A"/>
+    <rect x="-1.5" y="2" width="3" height="6" fill="#10B981"/>
+    <rect x="-0.5" y="8" width="1" height="4" fill="#92400E"/>
+  </g>
+  
+  <!-- Child 2 -->
+  <g transform="translate(56, 50)">
+    <circle cx="0" cy="0" r="2" fill="#FBBF9A"/>
+    <path d="M-2 2C-2 2 0 5 0 5C0 5 2 2 2 2C2 6 0 6 0 6C0 6 -2 6 -2 2Z" fill="#F97316"/>
+    <rect x="-0.5" y="6" width="1" height="4" fill="#F3E8FF"/>
+  </g>
+  
+  <!-- Hearts -->
+  <g fill="#F87171" opacity="0.7">
+    <path d="M24 16C24 14 26 12 28 14C30 12 32 14 32 16C32 18 28 22 28 22C28 22 24 18 24 16Z"/>
+    <path d="M4 32C4 30 6 28 8 30C10 28 12 30 12 32C12 34 8 38 8 38C8 38 4 34 4 32Z"/>
+    <path d="M52 36C52 34 54 32 56 34C58 32 60 34 60 36C60 38 56 42 56 42C56 42 52 38 52 36Z"/>
+  </g>
+</svg>

@@ -1,0 +1,92 @@
+/* Critical CSS for Gifts Section - Loaded inline for performance */
+.gifts-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  min-height: 640px;
+}
+
+@media (min-width: 640px) {
+  .gifts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gifts-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Gift card base styles */
+.gift-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.gift-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Image container */
+.gift-image-container {
+  position: absolute;
+  inset: 0;
+}
+
+.gift-image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.gift-card:hover .gift-image {
+  transform: scale(1.1);
+}
+
+/* Overlay */
+.gift-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2), transparent);
+  transition: background 0.3s ease;
+}
+
+.gift-card:hover .gift-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3), transparent);
+}
+
+/* Content positioning */
+.gift-content {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .gift-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Performance optimizations */
+.gift-card * {
+  backface-visibility: hidden;
+}
+
+/* GPU acceleration for smooth animations */
+.gift-card,
+.gift-image,
+.gift-overlay {
+  transform: translateZ(0);
+}

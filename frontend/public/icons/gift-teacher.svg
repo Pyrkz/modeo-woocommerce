@@ -1,0 +1,97 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Teacher figure -->
+  <g transform="translate(32, 40)">
+    <!-- Head -->
+    <circle cx="0" cy="-12" r="6" fill="#FBBF9A"/>
+    <!-- Hair -->
+    <path d="M-6 -18C-6 -22 -2 -24 0 -24C2 -24 6 -22 6 -18C6 -16 4 -14 2 -14C0 -14 -2 -14 -4 -14C-6 -14 -6 -16 -6 -18Z" fill="#8B4513"/>
+    <!-- Glasses -->
+    <circle cx="-3" cy="-13" r="2.5" stroke="#374151" stroke-width="1" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="3" cy="-13" r="2.5" stroke="#374151" stroke-width="1" fill="rgba(255,255,255,0.3)"/>
+    <line x1="-0.5" y1="-13" x2="0.5" y2="-13" stroke="#374151" stroke-width="1"/>
+    <!-- Eyes -->
+    <circle cx="-3" cy="-13" r="1" fill="#374151"/>
+    <circle cx="3" cy="-13" r="1" fill="#374151"/>
+    <!-- Nose -->
+    <circle cx="0" cy="-10" r="0.5" fill="#F87171"/>
+    <!-- Smile -->
+    <path d="M-2 -8C0 -6 2 -8 2 -8" stroke="#374151" stroke-width="0.5" fill="none"/>
+    
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="5" ry="10" fill="#3B82F6"/>
+    <!-- Arms -->
+    <ellipse cx="-8" cy="-2" rx="2" ry="6" fill="#FBBF9A"/>
+    <ellipse cx="8" cy="-2" rx="2" ry="6" fill="#FBBF9A"/>
+    <!-- Legs -->
+    <ellipse cx="-2" cy="12" rx="1.5" ry="6" fill="#374151"/>
+    <ellipse cx="2" cy="12" rx="1.5" ry="6" fill="#374151"/>
+  </g>
+  
+  <!-- Blackboard -->
+  <rect x="8" y="8" width="16" height="12" fill="#374151" rx="1"/>
+  <rect x="9" y="9" width="14" height="10" fill="#1F2937" rx="0.5"/>
+  
+  <!-- Text on blackboard -->
+  <g fill="#10B981" font-family="Arial" font-size="3">
+    <text x="16" y="14">A + B = C</text>
+    <text x="16" y="17">2 + 2 = 4</text>
+  </g>
+  
+  <!-- Books -->
+  <g transform="translate(44, 48)">
+    <!-- Book 1 -->
+    <rect x="0" y="0" width="3" height="8" fill="#DC2626"/>
+    <rect x="0.3" y="0.5" width="2.4" height="7" fill="#B91C1C"/>
+    <!-- Book 2 -->
+    <rect x="3" y="1" width="3" height="7" fill="#10B981"/>
+    <rect x="3.3" y="1.5" width="2.4" height="6" fill="#059669"/>
+    <!-- Book 3 -->
+    <rect x="6" y="2" width="3" height="6" fill="#3B82F6"/>
+    <rect x="6.3" y="2.5" width="2.4" height="5" fill="#2563EB"/>
+  </g>
+  
+  <!-- Apple -->
+  <g transform="translate(52, 24)">
+    <ellipse cx="0" cy="2" rx="3" ry="4" fill="#DC2626"/>
+    <ellipse cx="0" cy="1" rx="2.5" ry="3" fill="#F87171"/>
+    <!-- Apple stem -->
+    <rect x="-0.3" y="-2" width="0.6" height="3" fill="#92400E"/>
+    <!-- Apple leaf -->
+    <ellipse cx="1" cy="-1" rx="1" ry="2" fill="#10B981" transform="rotate(30)"/>
+  </g>
+  
+  <!-- Chalk -->
+  <g transform="translate(40, 32)">
+    <rect x="0" y="0" width="6" height="1" fill="#F3F4F6" rx="0.5"/>
+    <rect x="0" y="0" width="1" height="1" fill="#E5E7EB" rx="0.5"/>
+  </g>
+  
+  <!-- Decorative school elements -->
+  <g fill="#F59E0B" opacity="0.6">
+    <!-- Star 1 -->
+    <g transform="translate(8, 52)">
+      <polygon points="0,-3 1,-1 3,0 1,1 0,3 -1,1 -3,0 -1,-1"/>
+    </g>
+    <!-- Star 2 -->
+    <g transform="translate(56, 8)">
+      <polygon points="0,-2 0.7,-0.7 2,0 0.7,0.7 0,2 -0.7,0.7 -2,0 -0.7,-0.7"/>
+    </g>
+    <!-- Star 3 -->
+    <g transform="translate(12, 32)">
+      <polygon points="0,-2 0.7,-0.7 2,0 0.7,0.7 0,2 -0.7,0.7 -2,0 -0.7,-0.7"/>
+    </g>
+  </g>
+  
+  <!-- Ruler -->
+  <rect x="6" y="56" width="16" height="2" fill="#F59E0B"/>
+  <g stroke="#374151" stroke-width="0.3">
+    <line x1="7" y1="56" x2="7" y2="58"/>
+    <line x1="9" y1="56" x2="9" y2="58"/>
+    <line x1="11" y1="56" x2="11" y2="58"/>
+    <line x1="13" y1="56" x2="13" y2="58"/>
+    <line x1="15" y1="56" x2="15" y2="58"/>
+    <line x1="17" y1="56" x2="17" y2="58"/>
+    <line x1="19" y1="56" x2="19" y2="58"/>
+    <line x1="21" y1="56" x2="21" y2="58"/>
+  </g>
+</svg>

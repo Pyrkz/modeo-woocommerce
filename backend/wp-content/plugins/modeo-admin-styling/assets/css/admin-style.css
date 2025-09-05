@@ -1,0 +1,248 @@
+/**
+ * Modeo Admin Styling - Admin Dashboard CSS
+ * Custom styling for WordPress admin dashboard
+ */
+
+:root {
+  --modeo-primary: #007cba;
+  --modeo-secondary: #135e96;
+  --modeo-accent: #00a32a;
+  --modeo-dark: #1d2327;
+  --modeo-light: #f6f7f7;
+  --modeo-text: #1d2327;
+  --modeo-border: #c3c4c7;
+  --modeo-hover: #f0f0f1;
+}
+
+/* Admin Bar Styling */
+#wpadminbar {
+  background: linear-gradient(135deg, var(--modeo-primary) 0%, var(--modeo-secondary) 100%) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#wpadminbar .ab-top-menu > li:hover > .ab-item,
+#wpadminbar .ab-top-menu > li > .ab-item:focus {
+  background-color: rgba(255,255,255,0.1) !important;
+}
+
+#wpadminbar .ab-item,
+#wpadminbar a.ab-item,
+#wpadminbar > #wp-toolbar span.ab-label,
+#wpadminbar > #wp-toolbar span.noticon {
+  color: #ffffff !important;
+}
+
+/* Admin Menu Styling */
+#adminmenu {
+  background: #ffffff !important;
+  border-right: 1px solid var(--modeo-border);
+}
+
+#adminmenu li.menu-top {
+  border-bottom: 1px solid #f0f0f1;
+}
+
+#adminmenu .wp-menu-name {
+  color: var(--modeo-text) !important;
+  font-weight: 500;
+}
+
+#adminmenu a.wp-menu-open:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+  background-color: var(--modeo-hover) !important;
+  color: var(--modeo-primary) !important;
+}
+
+#adminmenu .wp-menu-image:before {
+  color: #72777c !important;
+}
+
+#adminmenu li.current > a.menu-top,
+#adminmenu li.wp-has-current-submenu > a.wp-has-current-submenu {
+  background: var(--modeo-primary) !important;
+  color: #ffffff !important;
+}
+
+#adminmenu li.current .wp-menu-image:before,
+#adminmenu li.wp-has-current-submenu .wp-menu-image:before {
+  color: #ffffff !important;
+}
+
+/* Main Content Area */
+.wp-core-ui .wrap {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.wrap h1,
+.wrap h2 {
+  color: var(--modeo-text);
+  font-weight: 600;
+  border-bottom: 2px solid var(--modeo-primary);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+/* Buttons Styling */
+.wp-core-ui .button-primary {
+  background: var(--modeo-primary) !important;
+  border-color: var(--modeo-secondary) !important;
+  box-shadow: 0 1px 3px rgba(0,124,186,0.3) !important;
+  text-shadow: none !important;
+  transition: all 0.2s ease;
+}
+
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:focus {
+  background: var(--modeo-secondary) !important;
+  border-color: var(--modeo-secondary) !important;
+  box-shadow: 0 2px 6px rgba(0,124,186,0.4) !important;
+  transform: translateY(-1px);
+}
+
+.wp-core-ui .button {
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+/* WooCommerce Specific Styling */
+.woocommerce-layout__header {
+  background: var(--modeo-light);
+  border-bottom: 1px solid var(--modeo-border);
+  padding: 15px 20px;
+}
+
+.woocommerce-layout__header h1 {
+  color: var(--modeo-primary);
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+/* Dashboard Widgets */
+.postbox {
+  border: 1px solid var(--modeo-border);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.postbox .hndle {
+  background: var(--modeo-light);
+  border-bottom: 1px solid var(--modeo-border);
+  color: var(--modeo-text);
+  font-weight: 600;
+  padding: 12px 20px;
+}
+
+/* Tables Styling */
+.widefat {
+  border: 1px solid var(--modeo-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.widefat thead th {
+  background: var(--modeo-light);
+  color: var(--modeo-text);
+  font-weight: 600;
+}
+
+.widefat tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.widefat tbody tr:hover {
+  background: var(--modeo-hover);
+}
+
+/* Forms */
+.form-table th {
+  color: var(--modeo-text);
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+select,
+textarea {
+  border: 1px solid var(--modeo-border);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05) inset;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--modeo-primary);
+  box-shadow: 0 0 0 1px var(--modeo-primary), 0 1px 2px rgba(0,0,0,0.05) inset;
+}
+
+/* Notices */
+.notice-success {
+  border-left-color: var(--modeo-accent);
+}
+
+.notice-info {
+  border-left-color: var(--modeo-primary);
+}
+
+/* Footer */
+#wpfooter {
+  color: #72777c;
+}
+
+#wpfooter a {
+  color: var(--modeo-primary);
+}
+
+/* Custom Modeo Branding */
+.modeo-brand {
+  display: inline-block;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, var(--modeo-primary), var(--modeo-secondary));
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+  .wp-core-ui .wrap {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .wrap h1,
+  .wrap h2 {
+    font-size: 22px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wrap > * {
+  animation: fadeIn 0.3s ease-out;
+}

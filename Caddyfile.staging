@@ -1,0 +1,67 @@
+# Staging Caddyfile for nextmodeo.sitefy.pl
+
+nextmodeo.sitefy.pl {
+    # Enable compression
+    encode zstd gzip
+
+    # Security headers (less strict for staging)
+    header {
+        # Basic security headers
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Content-Type-Options nosniff
+        X-Frame-Options SAMEORIGIN
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        
+        # Staging environment header
+        X-Environment "staging"
+        
+        # Remove server info
+        -Server
+    }
+
+    # WordPress paths (checkout, account, admin, API)
+    @wp path /checkout* /zamowienie* /order-received* /moje-konto* /my-account* /wp-admin* /wp-login* /wp-json* /wc-api* /xmlrpc.php
+    handle @wp {
+        reverse_proxy wordpress:80 {
+            header_up Host {host}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+            header_up X-Forwarded-Host {host}
+        }
+    }
+
+    # Static assets from WordPress
+    @wp_assets path /wp-content/* /wp-includes/*
+    handle @wp_assets {
+        reverse_proxy wordpress:80 {
+            header_up Host {host}
+        }
+    }
+
+    # Next.js app (catalog, homepage, cart, etc.)
+    handle {
+        reverse_proxy nextjs:3000 {
+            header_up Host {host}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # Logs for monitoring (more verbose for staging)
+    log {
+        output file /var/log/caddy/staging.log {
+            roll_size 100MB
+            roll_keep 5
+        }
+        format json
+        level DEBUG
+    }
+}
+
+# Redirect www to non-www
+www.nextmodeo.sitefy.pl {
+    redir https://nextmodeo.sitefy.pl{uri} permanent
+}

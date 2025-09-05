@@ -1,0 +1,39 @@
+/* Mobile Navigation Performance Optimizations */
+
+/* GPU acceleration for transforms */
+.mobile-nav-transform {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Smooth scroll behavior */
+.mobile-nav-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Hardware acceleration for sticky header */
+.sticky-mobile-header {
+  transform: translateZ(0);
+  will-change: transform, backdrop-filter;
+  contain: layout style paint;
+}
+
+/* Optimize backdrop blur */
+.mobile-nav-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Reduce paint operations */
+.mobile-nav-item {
+  contain: layout style;
+}
+
+/* Preload critical CSS */
+@media (max-width: 768px) {
+  .mobile-nav-preload {
+    content-visibility: auto;
+    contain-intrinsic-size: 100vh;
+  }
+}

@@ -1,0 +1,41 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Flower stems -->
+  <rect x="20" y="36" width="2" height="20" fill="#059669" rx="1"/>
+  <rect x="30" y="32" width="2" height="24" fill="#059669" rx="1"/>
+  <rect x="42" y="38" width="2" height="18" fill="#059669" rx="1"/>
+  
+  <!-- Flower 1 (Tulip) -->
+  <ellipse cx="21" cy="30" rx="4" ry="6" fill="#EC4899"/>
+  <ellipse cx="21" cy="28" rx="3" ry="4" fill="#F9A8D4"/>
+  
+  <!-- Flower 2 (Rose) -->
+  <circle cx="31" cy="26" r="5" fill="#DC2626"/>
+  <circle cx="31" cy="26" r="3.5" fill="#F87171"/>
+  <circle cx="31" cy="26" r="2" fill="#FCA5A5"/>
+  
+  <!-- Flower 3 (Daisy) -->
+  <g transform="translate(43, 32)">
+    <circle cx="0" cy="0" r="2" fill="#FDE047"/>
+    <ellipse cx="0" cy="-4" rx="1.5" ry="3" fill="#FFFFFF"/>
+    <ellipse cx="3" cy="-2" rx="1.5" ry="3" fill="#FFFFFF" transform="rotate(45)"/>
+    <ellipse cx="3" cy="2" rx="1.5" ry="3" fill="#FFFFFF" transform="rotate(90)"/>
+    <ellipse cx="0" cy="4" rx="1.5" ry="3" fill="#FFFFFF" transform="rotate(135)"/>
+    <ellipse cx="-3" cy="2" rx="1.5" ry="3" fill="#FFFFFF" transform="rotate(180)"/>
+    <ellipse cx="-3" cy="-2" rx="1.5" ry="3" fill="#FFFFFF" transform="rotate(225)"/>
+  </g>
+  
+  <!-- Leaves -->
+  <ellipse cx="17" cy="40" rx="2" ry="4" fill="#10B981" transform="rotate(-20)"/>
+  <ellipse cx="25" cy="44" rx="2" ry="4" fill="#10B981" transform="rotate(20)"/>
+  <ellipse cx="35" cy="46" rx="2" ry="4" fill="#10B981" transform="rotate(-15)"/>
+  <ellipse cx="47" cy="48" rx="2" ry="4" fill="#10B981" transform="rotate(25)"/>
+  
+  <!-- Ribbon -->
+  <path d="M12 8C12 8 20 12 32 12C44 12 52 8 52 8C50 12 46 14 40 15C36 16 28 16 24 15C18 14 14 12 12 8Z" fill="#EC4899"/>
+  <path d="M12 8C14 6 18 4 24 5C28 6 36 6 40 5C46 4 50 6 52 8" fill="#F9A8D4"/>
+  
+  <!-- Bow -->
+  <ellipse cx="32" cy="12" rx="8" ry="3" fill="#EC4899"/>
+  <ellipse cx="32" cy="12" rx="6" ry="2" fill="#F9A8D4"/>
+  <rect x="31" y="9" width="2" height="6" fill="#DC2626"/>
+</svg>

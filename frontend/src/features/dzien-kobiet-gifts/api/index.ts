@@ -1,0 +1,1 @@
+export { DzienKobietApi } from './dzien-kobiet.api';

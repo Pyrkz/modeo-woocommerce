@@ -1,0 +1,86 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dad figure -->
+  <g transform="translate(32, 36)">
+    <!-- Head -->
+    <circle cx="0" cy="-12" r="6" fill="#FBBF9A"/>
+    <!-- Hair -->
+    <path d="M-6 -18C-6 -22 -2 -24 0 -24C2 -24 6 -22 6 -18C6 -16 4 -14 2 -14C0 -14 -2 -14 -4 -14C-6 -14 -6 -16 -6 -18Z" fill="#654321"/>
+    <!-- Beard -->
+    <path d="M-4 -8C-4 -6 -2 -4 0 -4C2 -4 4 -6 4 -8C4 -6 2 -2 0 -2C-2 -2 -4 -6 -4 -8Z" fill="#8B4513"/>
+    <!-- Eyes -->
+    <circle cx="-2" cy="-13" r="0.8" fill="#374151"/>
+    <circle cx="2" cy="-13" r="0.8" fill="#374151"/>
+    <!-- Nose -->
+    <circle cx="0" cy="-10" r="0.5" fill="#F87171"/>
+    <!-- Smile -->
+    <path d="M-2 -8C0 -6 2 -8 2 -8" stroke="#374151" stroke-width="0.5" fill="none"/>
+    
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="5" ry="10" fill="#3B82F6"/>
+    <!-- Arms -->
+    <ellipse cx="-8" cy="-2" rx="2" ry="6" fill="#FBBF9A"/>
+    <ellipse cx="8" cy="-2" rx="2" ry="6" fill="#FBBF9A"/>
+    <!-- Legs -->
+    <ellipse cx="-2" cy="12" rx="1.5" ry="6" fill="#374151"/>
+    <ellipse cx="2" cy="12" rx="1.5" ry="6" fill="#374151"/>
+  </g>
+  
+  <!-- Child figure -->
+  <g transform="translate(48, 48)">
+    <!-- Head -->
+    <circle cx="0" cy="-4" r="3" fill="#FBBF9A"/>
+    <!-- Hair -->
+    <path d="M-3 -7C-3 -9 -1 -10 0 -10C1 -10 3 -9 3 -7C3 -6 2 -5 1 -5C0 -5 -1 -5 -2 -5C-3 -5 -3 -6 -3 -7Z" fill="#D4A574"/>
+    <!-- Eyes -->
+    <circle cx="-1" cy="-5" r="0.5" fill="#374151"/>
+    <circle cx="1" cy="-5" r="0.5" fill="#374151"/>
+    <!-- Smile -->
+    <path d="M-1 -3C0 -2 1 -3 1 -3" stroke="#374151" stroke-width="0.3" fill="none"/>
+    
+    <!-- Body -->
+    <ellipse cx="0" cy="2" rx="2.5" ry="5" fill="#10B981"/>
+    <!-- Arms -->
+    <ellipse cx="-4" cy="0" rx="1" ry="3" fill="#FBBF9A"/>
+    <ellipse cx="4" cy="0" rx="1" ry="3" fill="#FBBF9A"/>
+    <!-- Legs -->
+    <ellipse cx="-1" cy="8" rx="0.8" ry="3" fill="#FBBF9A"/>
+    <ellipse cx="1" cy="8" rx="0.8" ry="3" fill="#FBBF9A"/>
+  </g>
+  
+  <!-- Tie -->
+  <g transform="translate(32, 28)">
+    <polygon points="0,0 -2,2 -2,8 0,10 2,8 2,2" fill="#DC2626"/>
+    <polygon points="0,2 -1.5,3 -1.5,7 0,8 1.5,7 1.5,3" fill="#B91C1C"/>
+    <!-- Tie pattern -->
+    <circle cx="0" cy="4" r="0.5" fill="#FDE047"/>
+    <circle cx="0" cy="6" r="0.5" fill="#FDE047"/>
+  </g>
+  
+  <!-- Mustache -->
+  <g transform="translate(32, 24)">
+    <ellipse cx="0" cy="0" rx="3" ry="1" fill="#8B4513"/>
+    <ellipse cx="-1.5" cy="0" rx="1.2" ry="0.8" fill="#654321"/>
+    <ellipse cx="1.5" cy="0" rx="1.2" ry="0.8" fill="#654321"/>
+  </g>
+  
+  <!-- Tools (Dad's hobby) -->
+  <g transform="translate(16, 16)">
+    <!-- Hammer -->
+    <rect x="0" y="4" width="8" height="1" fill="#8B4513"/>
+    <rect x="7" y="2" width="3" height="5" fill="#6B7280"/>
+    <!-- Wrench -->
+    <rect x="0" y="8" width="6" height="1" fill="#6B7280"/>
+    <circle cx="0" cy="8.5" r="1.5" stroke="#6B7280" stroke-width="0.5" fill="none"/>
+    <circle cx="6" cy="8.5" r="1" stroke="#6B7280" stroke-width="0.5" fill="none"/>
+  </g>
+  
+  <!-- "DAD" text decorative -->
+  <g fill="#3B82F6" opacity="0.8" font-family="Arial" font-weight="bold" font-size="8">
+    <text x="16" y="52" text-anchor="middle">#1</text>
+    <text x="8" y="32" text-anchor="middle">♣</text>
+    <text x="56" y="24" text-anchor="middle">⚡</text>
+  </g>
+  
+  <!-- Heart between them -->
+  <path d="M40 40C40 38 42 36 44 38C46 36 48 38 48 40C48 42 44 46 44 46C44 46 40 42 40 40Z" fill="#F87171"/>
+</svg>

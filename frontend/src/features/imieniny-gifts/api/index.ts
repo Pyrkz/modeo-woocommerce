@@ -1,0 +1,1 @@
+export { ImieninyApi } from './imieniny.api';

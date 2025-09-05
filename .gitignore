@@ -1,0 +1,56 @@
+# WordPress core files
+/backend/wp-admin/
+/backend/wp-includes/
+/backend/*.php
+/backend/*.txt
+/backend/*.html
+/backend/license.txt
+/backend/readme.html
+
+# WordPress content (except themes/plugins we're developing)
+/backend/wp-content/uploads/
+/backend/wp-content/upgrade/
+/backend/wp-content/cache/
+/backend/wp-content/wc-logs/
+/backend/wp-content/wc-imports/
+
+# Configuration files with sensitive data
+/backend/wp-config.php
+*.env
+*.env.*
+
+# Dependencies
+/frontend/node_modules/
+/backend/vendor/
+
+# Build artifacts
+/frontend/.next/
+/frontend/out/
+/frontend/build/
+*.log
+
+# Backup files
+*.tar.gz
+*.sql
+/backups/
+/backup-*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# WordPress debug files
+/backend/wp-content/debug.log
+
+# Test files
+cookies.txt
+test-*.html
+
+# Production files that shouldn't be in version control
+/backend/wp-content/woocommerce_uploads/

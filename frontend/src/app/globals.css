@@ -1,0 +1,336 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile Navigation Performance Optimizations */
+@import '../features/navigation/styles/mobile-nav.css';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #cc1616;
+  --primary-hover: #b31313;
+  --accent: #059669;
+  --accent-hover: #047857;
+  --neutral: #6b7280;
+  --neutral-light: #9ca3af;
+  --success: #10b981;
+  --warning: #f59e0b;
+}
+
+/* Force light mode - removed dark mode auto-switching */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Product Description Styles */
+.product-description {
+  color: #4a4a4a;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.product-description h1 {
+  @apply text-4xl font-bold text-gray-900 mb-6 mt-0;
+  letter-spacing: -0.02em;
+}
+
+.product-description h2 {
+  @apply text-3xl font-semibold text-gray-800 mt-10 mb-5;
+  letter-spacing: -0.01em;
+}
+
+.product-description h3 {
+  @apply text-2xl font-semibold text-gray-800 mt-8 mb-4;
+  letter-spacing: -0.005em;
+}
+
+.product-description h4 {
+  @apply text-xl font-semibold text-gray-700 mt-6 mb-3;
+}
+
+.product-description p {
+  @apply text-gray-700 mb-5;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+.product-description ul {
+  @apply my-4 ml-0 pl-0;
+  list-style: none;
+}
+
+.product-description li {
+  @apply text-gray-700 mb-3 pl-7 relative;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.product-description li::before {
+  content: "•";
+  @apply absolute left-0 text-gray-600 font-bold;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.product-description strong,
+.product-description b {
+  @apply font-semibold text-gray-900;
+}
+
+.product-description em {
+  @apply italic text-gray-600;
+}
+
+.product-description a {
+  @apply text-primary underline font-medium transition-colors;
+}
+
+.product-description a:hover {
+  @apply text-primary-hover;
+}
+
+/* Short Description Styles */
+.product-description-short {
+  color: #4a4a4a;
+}
+
+.product-description-short h1,
+.product-description-short h2,
+.product-description-short h3,
+.product-description-short h4 {
+  @apply font-semibold text-gray-800 mb-3 mt-4;
+}
+
+.product-description-short p {
+  @apply text-gray-700 mb-3;
+  line-height: 1.6;
+}
+
+.product-description-short ul {
+  @apply my-3 ml-0 pl-0;
+  list-style: none;
+}
+
+.product-description-short li {
+  @apply text-gray-700 mb-2 pl-6 relative;
+}
+
+.product-description-short li::before {
+  content: "•";
+  @apply absolute left-0 text-gray-600 font-bold;
+}
+
+.product-description-short strong,
+.product-description-short b {
+  @apply font-semibold text-gray-900;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-description h1 {
+    @apply text-3xl mb-5;
+  }
+
+  .product-description h2 {
+    @apply text-2xl mt-8 mb-4;
+  }
+
+  .product-description h3 {
+    @apply text-xl mt-6 mb-3;
+  }
+
+  .product-description p,
+  .product-description li {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* Range slider styles */
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.range-slider::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.range-slider::-webkit-slider-track {
+  background: transparent;
+}
+
+.range-slider::-moz-range-track {
+  background: transparent;
+  border: none;
+}
+
+/* Fade-in animation for staggered effects */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+/* Custom scrollbar for filters */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db #f9fafb;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f9fafb;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Cart animations */
+@keyframes scale-in {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+
+/* Prevent body scroll when cart is open */
+body.cart-open {
+  overflow: hidden;
+}
+
+/* Scrollbar hide utility for smooth horizontal scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Enhanced scroll performance for touch devices */
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Performance optimizations for product sliders */
+.product-slider {
+  transform: translateZ(0);
+  will-change: scroll-position;
+  backface-visibility: hidden;
+}
+
+/* Smooth scrolling with GPU acceleration */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Lenis Smooth Scroll Performance Optimizations */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Performance improvements for scroll elements */
+.scroll-enhanced {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ScrollToTop button animations */
+.scroll-to-top {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+.scroll-progress-ring {
+  transform-origin: center;
+  will-change: transform;
+}

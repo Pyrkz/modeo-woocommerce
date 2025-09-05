@@ -1,0 +1,1029 @@
+/*
+Theme Name: Modeo Theme
+Theme URI: https://modeo.pl
+Description: Wysokiej jakości theme dla Modeo WooCommerce - dopasowany do Next.js design system
+Author: Modeo Team
+Version: 2.0
+Text Domain: modeo-theme
+*/
+
+/* Modeo Design System Variables */
+:root {
+  --color-primary: #cc1616;
+  --color-primary-hover: #b31313;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Body Styling - Match Next.js */
+body {
+  font-family: var(--font-sans);
+  background: var(--color-gray-50);
+  color: var(--color-foreground);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Hide admin bar for clean experience */
+.admin-bar {
+  padding-top: 0 !important;
+}
+
+/* Header CSS - Dokładnie jak Next.js */
+.bg-white { background-color: var(--color-background); }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.border-b { border-bottom: 1px solid var(--color-gray-200); }
+.max-w-7xl { max-width: 80rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items: center; }
+.h-16 { height: 4rem; }
+
+/* Next.js matching rounded styles */
+.rounded-lg { border-radius: var(--radius); }
+.rounded-full { border-radius: 9999px; }
+.focus\:ring-2:focus { box-shadow: 0 0 0 2px var(--ring-color); }
+.focus\:ring-primary\/50:focus { --ring-color: rgba(204, 22, 22, 0.5); }
+
+/* Header no-wrap styling */
+header nav {
+  white-space: nowrap;
+}
+
+header nav a,
+header nav button {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+header .flex {
+  flex-wrap: nowrap;
+}
+
+header .megamenu-trigger span {
+  white-space: nowrap;
+}
+
+/* Zapewnienie że wszystko w headerze nie się łamie */
+header .max-w-7xl > .flex {
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+header .flex-1 {
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+header nav .space-x-8 {
+  flex-wrap: nowrap;
+}
+
+header nav .space-x-8 > * {
+  flex-shrink: 0;
+}
+
+/* Minimalna szerokość dla menu na desktop */
+@media (min-width: 768px) {
+  header nav {
+    min-width: fit-content;
+  }
+}
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.font-bold { font-weight: 700; }
+.text-gray-900 { color: var(--color-gray-900); }
+.cursor-pointer { cursor: pointer; }
+.hover\:text-primary:hover { color: var(--color-primary); }
+.transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.hidden { display: none; }
+.space-x-8 > * + * { margin-left: 2rem; }
+.font-medium { font-weight: 500; }
+.text-gray-800 { color: var(--color-gray-800); }
+.font-semibold { font-weight: 600; }
+.text-primary { color: var(--color-primary); }
+.gap-4 { gap: 1rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.text-gray-700 { color: var(--color-gray-700); }
+.focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
+.focus\:ring-2:focus { box-shadow: var(--ring-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000), 0 0 0 2px var(--ring-color); }
+.focus\:ring-primary\/20:focus { --ring-color: rgba(204, 22, 22, 0.2); }
+.focus\:ring-primary\/50:focus { --ring-color: rgba(204, 22, 22, 0.5); }
+.ring-opacity-50 { --ring-opacity: 0.5; }
+.focus\:ring-opacity-50:focus { --ring-opacity: 0.5; }
+.rounded-lg { border-radius: var(--radius); }
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.w-8 { width: 2rem; }
+.h-8 { height: 2rem; }
+.rounded-full { border-radius: 9999px; }
+.bg-primary { background-color: var(--color-primary); }
+.hover\:bg-primary:hover { background-color: var(--color-primary); }
+.text-white { color: var(--color-background); }
+.group:hover .group-hover\:text-white { color: var(--color-background); }
+.justify-center { justify-content: center; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.w-4 { width: 1rem; }
+.h-4 { height: 1rem; }
+.transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.top-full { top: 100%; }
+.right-0 { right: 0px; }
+.mt-2 { margin-top: 0.5rem; }
+.border { border-width: 1px; }
+.border-gray-200 { border-color: var(--color-gray-200); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); }
+.z-50 { z-index: 50; }
+.min-w-48 { min-width: 12rem; }
+.p-3 { padding: 0.75rem; }
+.border-b { border-bottom-width: 1px; }
+.border-gray-100 { border-color: var(--color-gray-100); }
+.text-gray-600 { color: var(--color-gray-600); }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.hover\:bg-gray-50:hover { background-color: var(--color-gray-50); }
+.border-t { border-top-width: 1px; }
+.text-red-600 { color: #dc2626; }
+.hover\:bg-red-50:hover { background-color: #fef2f2; }
+.w-full { width: 100%; }
+.hover\:bg-primary-hover:hover { background-color: var(--color-primary-hover); }
+
+/* Next.js matching transitions and effects */
+.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.duration-200 { transition-duration: 200ms; }
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Ensure consistent button styling like Next.js */
+button.rounded-lg,
+.button.rounded-lg {
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+button.rounded-lg:focus,
+.button.rounded-lg:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(204, 22, 22, 0.2);
+}
+
+/* Match Next.js cart button exact styling */
+#cart-trigger,
+#mobile-cart-trigger {
+  border-radius: var(--radius);
+  transition: all 200ms ease;
+}
+
+#cart-trigger:focus,
+#mobile-cart-trigger:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(204, 22, 22, 0.5);
+}
+
+/* User menu button exact Next.js matching */
+.user-dropdown {
+  position: relative;
+  z-index: 999;
+}
+
+.user-dropdown .dropdown-toggle {
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.user-dropdown .dropdown-toggle:hover {
+  background-color: rgba(204, 22, 22, 0.05);
+}
+
+.user-dropdown .dropdown-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(204, 22, 22, 0.2);
+}
+
+.user-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background-color: white;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  min-width: 12rem;
+}
+
+.user-dropdown .dropdown-arrow {
+  transition: transform 0.2s ease;
+}
+.inline-flex { display: inline-flex; }
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.px-1\.5 { padding-left: 0.375rem; padding-right: 0.375rem; }
+.py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+.min-w-\[1\.25rem\] { min-width: 1.25rem; }
+.text-center { text-align: center; }
+.w-5 { width: 1.25rem; }
+.h-5 { height: 1.25rem; }
+.leading-none { line-height: 1; }
+.-top-1 { top: -0.25rem; }
+.-right-1 { right: -0.25rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.rounded { border-radius: 0.25rem; }
+.-top-2 { top: -0.5rem; }
+.-right-2 { right: -0.5rem; }
+.text-gray-500 { color: var(--color-gray-500); }
+.hover\:text-gray-600:hover { color: var(--color-gray-600); }
+.focus\:text-gray-600:focus { color: var(--color-gray-600); }
+.h-6 { height: 1.5rem; }
+.w-6 { width: 1.5rem; }
+.space-y-1 > * + * { margin-top: 0.25rem; }
+.block { display: block; }
+.rounded-md { border-radius: 0.375rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+.hover\:text-primary:hover { color: var(--color-primary); }
+.bg-gray-50 { background-color: var(--color-gray-50); }
+.hover\:bg-gray-50:hover { background-color: var(--color-gray-50); }
+.pt-2 { padding-top: 0.5rem; }
+.mt-2 { margin-top: 0.5rem; }
+.flex-col { flex-direction: column; }
+.items-start { align-items: flex-start; }
+
+@media (min-width: 640px) {
+  .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .sm\:block { display: block; }
+}
+
+@media (min-width: 768px) {
+  .md\:flex { display: flex; }
+  .md\:block { display: block; }
+  .md\:hidden { display: none; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  padding: 3rem 0;
+  background: var(--color-background);
+}
+
+.page-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .page-title h1 {
+    font-size: 3.75rem;
+  }
+}
+
+.page-title p {
+  font-size: 1.25rem;
+  color: var(--color-gray-600);
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+/* WooCommerce Account Section */
+.woocommerce-account .woocommerce {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .woocommerce-account .woocommerce {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .woocommerce-account .woocommerce {
+    padding: 2rem;
+  }
+}
+
+/* Login/Register Section */
+#customer_login {
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.woocommerce-form-login,
+.woocommerce-form-register {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.woocommerce-form-login h2,
+.woocommerce-form-register h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form Labels */
+.woocommerce-form-row label,
+.woocommerce-form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+  font-size: 0.875rem;
+}
+
+/* Form Inputs - Match Next.js Style */
+.woocommerce-form__input,
+.woocommerce-Input,
+input[type="text"],
+input[type="email"], 
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+.woocommerce-form__input:focus,
+.woocommerce-Input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(204, 22, 22, 0.1);
+}
+
+/* Primary Buttons - Match Next.js Style */
+.woocommerce-form-login__submit,
+.woocommerce-form-register__submit,
+.woocommerce-Button,
+.button,
+input[type="submit"] {
+  background: var(--color-primary);
+  color: var(--color-background);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 2.75rem;
+}
+
+.woocommerce-form-login__submit:hover,
+.woocommerce-form-register__submit:hover,
+.woocommerce-Button:hover,
+.button:hover,
+input[type="submit"]:hover {
+  background: var(--color-primary-hover);
+}
+
+/* My Account Navigation - Modern Tab Style */
+.woocommerce-MyAccount-navigation {
+  float: none;
+  width: 100%;
+  margin-bottom: 2rem;
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.woocommerce-MyAccount-navigation-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border-radius: 0;
+  text-decoration: none;
+  color: var(--color-gray-700);
+  transition: all 0.2s ease;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.woocommerce-MyAccount-navigation-link:hover {
+  background: var(--color-gray-50);
+  color: var(--color-primary);
+}
+
+.woocommerce-MyAccount-navigation-link.is-active,
+.woocommerce-MyAccount-navigation-link--is-active {
+  background: var(--color-gray-50);
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* My Account Content */
+.woocommerce-MyAccount-content {
+  float: none;
+  width: 100%;
+  padding: 2rem;
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+/* Tables */
+.woocommerce-orders-table,
+.shop_table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.woocommerce-orders-table th,
+.woocommerce-orders-table td,
+.shop_table th,
+.shop_table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.woocommerce-orders-table th,
+.shop_table th {
+  background: var(--color-gray-50);
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+/* Address Cards */
+.woocommerce-Address {
+  background: var(--color-gray-50);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.woocommerce-Address-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.woocommerce-Address-title h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+/* Messages - Match Next.js Alert Style */
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info {
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+  list-style: none;
+  border: 1px solid;
+}
+
+.woocommerce-message {
+  background: #d1fae5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.woocommerce-error {
+  background: #fee2e2;
+  color: #991b1b;
+  border-color: #fca5a5;
+}
+
+.woocommerce-info {
+  background: #dbeafe;
+  color: #1e40af;
+  border-color: #93c5fd;
+}
+
+/* Checkout Improvements */
+.woocommerce-checkout {
+  /* max-width: 1200px; - Removed for Fluid Checkout compatibility */
+  max-width: none !important; /* Allow full width for Fluid Checkout */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Override container max-width on checkout page */
+.woocommerce-checkout .container,
+.woocommerce-checkout .content-area,
+.woocommerce-checkout #main,
+.woocommerce-checkout #primary {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Ensure body doesn't constrain checkout */
+body.woocommerce-checkout {
+  overflow-x: hidden;
+}
+
+/* Hide Fluid Checkout edit cart link */
+.woocommerce-checkout .fc-checkout-order-review__header-link.fc-checkout-order-review__edit-cart {
+  display: none !important;
+}
+
+#order_review {
+  background: var(--color-background);
+  box-shadow: var(--shadow);
+  margin-top: 0rem;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .woocommerce-MyAccount-navigation ul {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .woocommerce-MyAccount-navigation-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .woocommerce-MyAccount-content {
+    padding: 1rem;
+  }
+  
+  #customer_login {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #customer_login .col-1,
+  #customer_login .col-2 {
+    width: 48%;
+    float: left;
+  }
+  
+  #customer_login .col-2 {
+    float: right;
+  }
+  
+  .woocommerce-MyAccount-navigation {
+    float: left;
+    width: 25%;
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+  
+  .woocommerce-MyAccount-navigation ul {
+    flex-direction: column;
+  }
+  
+  .woocommerce-MyAccount-navigation-link {
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+  
+  .woocommerce-MyAccount-navigation-link.is-active,
+  .woocommerce-MyAccount-navigation-link--is-active {
+    border-left-color: var(--color-primary);
+    border-bottom: none;
+  }
+  
+  .woocommerce-MyAccount-content {
+    float: left;
+    width: calc(75% - 2rem);
+  }
+}
+
+/* Additional Polish WooCommerce Elements */
+.woocommerce-privacy-policy-text {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  margin-top: 1rem;
+}
+
+.woocommerce-form__label-for-checkbox {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+
+.woocommerce-form__input-checkbox {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Loading and Disabled States */
+.woocommerce-Button:disabled,
+.button:disabled,
+input[type="submit"]:disabled {
+  background: var(--color-gray-300);
+  cursor: not-allowed;
+}
+
+/* Override WooCommerce form-row spacing to fix label positioning */
+.woocommerce form .form-row {
+  padding: 0 !important;
+  margin: 0 0 1rem !important;
+}
+
+/* Simple flexbox layout for checkout fields - no grid interference */
+.woocommerce-checkout .form-row {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  margin-bottom: 1rem !important;
+}
+
+.woocommerce-checkout .form-row label {
+  order: 1 !important;
+  margin-bottom: 0.5rem !important;
+  display: block !important;
+}
+
+.woocommerce-checkout .form-row .woocommerce-input-wrapper {
+  order: 2 !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Desktop: Two columns for first/last name only */
+@media (min-width: 768px) {
+  .woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
+    display: block !important;
+  }
+  
+  .woocommerce-checkout .form-row-first,
+  .woocommerce-checkout .form-row-last {
+    width: calc(50% - 0.5rem) !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+  }
+  
+  .woocommerce-checkout .form-row-first {
+    margin-right: 1rem !important;
+  }
+  
+  .woocommerce-checkout .form-row-wide {
+    width: 100% !important;
+    clear: both !important;
+    display: block !important;
+  }
+}
+
+/* Focus Styles for Accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Enhanced Mega Menu Styles - Next.js Design */
+.megamenu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.15s ease-out, visibility 0.15s ease-out, transform 0.15s ease-out;
+  transition-delay: 100ms;
+  pointer-events: none;
+}
+
+.megamenu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Arrow rotation on hover */
+.megamenu-arrow {
+  transition: transform 0.2s ease;
+}
+
+.megamenu-container:hover .megamenu-arrow {
+  transform: rotate(180deg);
+}
+
+/* Ensure no gap between trigger and menu */
+.megamenu-container {
+  position: relative;
+}
+
+.megamenu-container .megamenu {
+  margin-top: 0 !important;
+}
+
+/* Invisible bridge to prevent menu closing - like Next.js */
+.megamenu-bridge {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 20px;
+  z-index: 49;
+  visibility: hidden;
+  pointer-events: auto;
+  background: transparent;
+}
+
+/* Enhanced mega menu hover behavior - Override Tailwind hidden class */
+.megamenu-container:hover .megamenu.hidden,
+.megamenu-container:hover .megamenu,
+.megamenu:hover,
+.megamenu-container:hover .megamenu-bridge:hover ~ .megamenu {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+  transition-delay: 0ms !important;
+}
+
+/* Ensure all child elements maintain hover state */
+.megamenu-container:hover .megamenu *,
+.megamenu:hover *,
+.megamenu * {
+  pointer-events: auto !important;
+}
+
+/* Bridge hover support - Override hidden class */
+.megamenu-bridge:hover ~ .megamenu.hidden,
+.megamenu-bridge:hover ~ .megamenu,
+.megamenu-container:hover .megamenu-bridge ~ .megamenu.hidden,
+.megamenu-container:hover .megamenu-bridge ~ .megamenu {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+/* Override Tailwind's hidden class specifically */
+.megamenu.hidden {
+  display: none;
+}
+
+.megamenu-container:hover .megamenu.hidden {
+  display: block !important;
+}
+
+/* Desktop only - ensure proper behavior */
+@media (min-width: 769px) {
+  /* Force hover state to work reliably */
+  .megamenu-container {
+    position: relative;
+    z-index: 999;
+  }
+  
+  /* Extend hover area to prevent gaps */
+  .megamenu-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    right: -10px;
+    bottom: -5px;
+    z-index: -1;
+    pointer-events: auto;
+  }
+  
+  /* Ensure menu has proper positioning */
+  .megamenu-container .megamenu {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+  }
+  
+  /* Better hover zone management */
+  .megamenu-container:hover .megamenu {
+    transition-delay: 0ms !important;
+  }
+  
+  .megamenu-container:not(:hover) .megamenu {
+    transition-delay: 150ms !important;
+  }
+}
+
+/* Additional utility classes for mega menu */
+.space-x-1 > * + * { margin-left: 0.25rem; }
+.space-x-3 > * + * { margin-left: 0.75rem; }
+.space-y-3 > * + * { margin-top: 0.75rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+.group:hover .group-hover\:scale-110 { transform: scale(1.1); }
+.group:hover .group-hover\:translate-x-1 { transform: translateX(0.25rem); }
+.duration-200 { transition-duration: 200ms; }
+.ease-out { transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+.fixed { position: fixed; }
+.top-16 { top: 4rem; }
+.left-0 { left: 0px; }
+.w-full { width: 100%; }
+.border-t { border-top-width: 1px; }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+.px-8 { padding-left: 2rem; padding-right: 2rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.max-w-screen-2xl { max-width: 1536px; }
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.gap-8 { gap: 2rem; }
+.pr-8 { padding-right: 2rem; }
+.border-r { border-right-width: 1px; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.p-2 { padding: 0.5rem; }
+.p-6 { padding: 1.5rem; }
+.bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+.from-blue-50 { --tw-gradient-from: #eff6ff; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(239, 246, 255, 0)); }
+.to-indigo-100 { --tw-gradient-to: #e0e7ff; }
+.from-pink-50 { --tw-gradient-from: #fdf2f8; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(253, 242, 248, 0)); }
+.to-rose-100 { --tw-gradient-to: #ffe4e6; }
+.from-purple-50 { --tw-gradient-from: #faf5ff; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(250, 245, 255, 0)); }
+.from-green-50 { --tw-gradient-from: #f0fdf4; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(240, 253, 244, 0)); }
+.to-emerald-100 { --tw-gradient-to: #dcfce7; }
+.rounded-2xl { border-radius: 1rem; }
+.border-blue-200 { border-color: #c3ddfd; }
+.border-pink-200 { border-color: #fecaca; }
+.border-purple-200 { border-color: #e9d5ff; }
+.border-green-200 { border-color: #bbf7d0; }
+.min-h-\[280px\] { min-height: 280px; }
+.flex-col { flex-direction: column; }
+.justify-center { justify-content: center; }
+.text-center { text-align: center; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.max-w-xs { max-width: 20rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.bg-blue-500 { background-color: #3b82f6; }
+.hover\:bg-blue-600:hover { background-color: #2563eb; }
+.bg-pink-500 { background-color: #ec4899; }
+.hover\:bg-pink-600:hover { background-color: #db2777; }
+.bg-purple-500 { background-color: #8b5cf6; }
+.hover\:bg-purple-600:hover { background-color: #7c3aed; }
+.bg-green-500 { background-color: #22c55e; }
+.hover\:bg-green-600:hover { background-color: #16a34a; }
+.ml-2 { margin-left: 0.5rem; }
+.mr-4 { margin-right: 1rem; }
+.flex-1 { flex: 1 1 0%; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.white-space-nowrap { white-space: nowrap; }
+.flex-shrink-0 { flex-shrink: 0; }
+.invisible { visibility: hidden; }
+.absolute { position: absolute; }
+.top-full { top: 100%; }
+.left-0 { left: 0px; }
+.right-0 { right: 0px; }
+.h-2 { height: 0.5rem; }
+.z-40 { z-index: 40; }
+
+@media (min-width: 768px) {
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .md\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .md\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+  .md\:py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+  .md\:pr-8 { padding-right: 2rem; }
+  .md\:border-r { border-right-width: 1px; }
+  .md\:pl-0 { padding-left: 0px; }
+}
+
+/* Mobile Navigation Enhancement */
+.mobile-menu {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.mobile-menu.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: currentColor;
+}

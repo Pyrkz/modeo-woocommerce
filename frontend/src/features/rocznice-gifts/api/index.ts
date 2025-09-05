@@ -1,0 +1,1 @@
+export { RoczniceApi } from './rocznice.api';

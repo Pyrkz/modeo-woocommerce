@@ -1,0 +1,1 @@
+export { default as useSylwesterGifts } from './useSylwesterGiftsOptimized';

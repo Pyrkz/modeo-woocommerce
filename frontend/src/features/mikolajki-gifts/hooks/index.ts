@@ -1,0 +1,1 @@
+export { default as useMikolajkiGifts } from './useMikolajkiGiftsOptimized';

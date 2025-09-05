@@ -1,0 +1,25 @@
+# Production Caddyfile dla modeo.pl
+
+https://modeo.pl {
+    encode zstd gzip
+
+    # WordPress paths (checkout, konto, admin)
+    @wp path /checkout* /zamowienie* /moje-konto* /wp-admin* /wp-json* /wc-api*
+    handle @wp {
+        reverse_proxy wordpress:80 {
+            header_up Host modeo.pl
+            header_up X-Forwarded-Proto https
+        }
+    }
+
+    # Next.js (catalog, homepage, koszyk)
+    handle {
+        reverse_proxy nextjs:3000
+    }
+
+    # CORS for API calls
+    header /wp-json/* {
+        Access-Control-Allow-Origin https://modeo.pl
+        Access-Control-Allow-Credentials true
+    }
+}

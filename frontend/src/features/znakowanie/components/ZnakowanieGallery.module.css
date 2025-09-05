@@ -1,0 +1,39 @@
+/* Native CSS animations for ZnakowanieGallery without framer-motion */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes bounce-x {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+}
+
+/* Apply animations */
+.spin {
+  animation: spin 3s linear infinite;
+}
+
+.bounce-x {
+  animation: bounce-x 2s ease-in-out infinite;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .spin,
+  .bounce-x {
+    animation: none !important;
+  }
+}
